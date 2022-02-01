@@ -81,7 +81,3 @@ while running:
     pygame.display.update() 
 
 pygame.quit()
-
-##testadsfasdf
-pys = 1+1
-print(pys)
