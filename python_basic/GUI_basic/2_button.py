@@ -1,4 +1,8 @@
+import os
 from tkinter import *
+
+current_path = os.path.dirname(__file__) # 현재 파일의 위치 반환
+
 
 root = Tk()
 root.title("Nado GUI")
@@ -14,5 +18,18 @@ btn3.pack()
 
 btn4 = Button(root, width=10, height=3, text="버튼4") # 고정된 크기
 btn4.pack()
+
+btn5 = Button(root, fg="red", bg="yellow", text="버튼5")
+btn5.pack()
+
+photo = PhotoImage(file=os.path.join(current_path, "img.png"))
+btn6 = Button(root, image= photo)
+btn6.pack()
+
+def btncmd() :
+    print("Button Clicked")
+
+btn7 = Button(root, text = "동작하는 버튼", command=btncmd)
+btn7.pack()
 
 root.mainloop()
